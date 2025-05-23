@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ocean芯選｜魚油問卷調查</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', '微軟正黑體', sans-serif;
+      background: linear-gradient(to right, #cce3f6, #f0fbff);
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 123, 167, 0.15);
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1.6rem;
+      font-weight: 600;
+      color: #023e8a;
+    }
+
+    .options {
+      margin-top: 0.5rem;
+    }
+
+    .options label {
+      display: block;
+      margin: 0.4rem 0;
+      font-weight: normal;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+      transform: scale(1.2);
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.4rem;
+      border: 1px solid #90e0ef;
+      border-radius: 10px;
+      background-color: #f9fdff;
+      font-size: 1rem;
+    }
+
+    select:focus,
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #00b4d8;
+      box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+    }
+
+    button {
+      margin-top: 2rem;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button:hover {
+      background-color: #0096c7;
+      transform: scale(1.05);
+    }
+
+    .emoji {
+      font-size: 1.2rem;
+      margin-right: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🐟 Ocean芯選｜魚油產品調查問卷</h1>
+
+    <form id="surveyForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVL2t8ptfMCQ8rk1e32vt2omUao1VCvBtYVm7aPPC9VUUp5Q/formResponse" method="POST" target="_blank">
+
+      <!-- Q1 單選題 -->
+      <label><span class="emoji">💊</span>1. 您是否有定期補充魚油或 Omega-3 的習慣？</label>
+      <div class="options">
+        <label><input type="radio" name="entry.1948856248" value="是" required> 是，我有持續在補充</label>
+        <label><input type="radio" name="entry.1948856248" value="否"> 否，暫時沒有這個習慣</label>
+      </div>
+
+      <!-- Q2 多選 -->
+      <label><span class="emoji">🔍</span>2. 您選擇魚油產品時最在意的是什麼？（可複選）</label>
+      <div class="options">
+        <label><input type="checkbox" name="entry.1682300692" value="產地來源"> 產地來源</label>
+        <label><input type="checkbox" name="entry.1682300692" value="有無腥味"> 有無腥味</label>
+        <label><input type="checkbox" name="entry.1682300692" value="價格"> 價格</label>
+        <label><input type="checkbox" name="entry.1682300692" value="含量與純度"> 含量與純度</label>
+        <label><input type="checkbox" name="entry.1682300692" value="第三方檢驗認證"> 第三方檢驗認證</label>
+      </div>
+
+      <!-- Q3 多選 -->
+      <label><span class="emoji">🛒</span>3. 您通常在哪裡購買魚油或保健食品？</label>
+      <div class="options">
+        <label><input type="checkbox" name="entry.977941811" value="連鎖藥局"> 連鎖藥局</label>
+        <label><input type="checkbox" name="entry.977941811" value="網路電商"> 網路電商</label>
+        <label><input type="checkbox" name="entry.977941811" value="直銷/代購"> 直銷/代購</label>
+        <label><input type="checkbox" name="entry.977941811" value="醫療院所"> 醫療院所</label>
+        <input type="text" name="entry.977941811" placeholder="其他：請輸入通路（非必填）">
+      </div>
+
+      <<!-- Q4 下拉選單 -->
+      <label><span class="emoji">🧪</span>4. 如果有一款「無腥味、來源透明、醫師推薦」的魚油，您會有興趣購買嗎？</label>
+      <select name="entry.1221765703" required>
+        <option value="">請選擇</option>
+        <option value="非常有興趣">非常有興趣</option>
+        <option value="有點興趣">有點興趣</option>
+        <option value="沒有興趣">沒有興趣</option>
+      </select>
+
+      <!-- Q5 下拉選單 -->
+      <label><span class="emoji">💡</span>5. 您偏好魚油的哪種服用形式？</label>
+      <select name="entry.262875746" required>
+        <option value="">請選擇</option>
+        <option value="小顆易吞膠囊">小顆易吞膠囊</option>
+        <option value="嚼錠/軟糖">嚼錠/軟糖</option>
+        <option value="無特別偏好">無特別偏好</option>
+      </select>
+
+      <button type="submit">✨ 送出我的意見</button>
+    </form>
+  </div>
+
+</body>
+</html>
